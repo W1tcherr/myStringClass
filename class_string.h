@@ -16,17 +16,19 @@ public:
 
 	myString& operator = (const myString& other);
 
+    myString& operator = (const char* other);
+
 	myString operator + (const myString& other);
+
+    myString operator += (const myString& other);
 
 	bool operator == (const myString& other);
 
 	bool operator != (const myString& other);
 
-	char& operator [](int index);
+	char& operator [](unsigned index);
 
 	void append(char sim); //add new symbol in str
-
-	int strLength(const char* string); //counts the length of string
 
 	int Length();
 
@@ -34,8 +36,8 @@ public:
 
 private:
 	char* str;
-	int length;
+	unsigned length;
 
-	friend std::ostream& operator<<(std::ostream& os, const myString& str);
-	friend std::istream& operator>>(std::istream& is, myString& str);
+	friend std::ostream& operator << (std::ostream& os, const myString& str);
+	friend std::istream& operator >> (std::istream& is, myString& str);
 };

@@ -1,5 +1,5 @@
 #include<iostream>
-#include"Class_string.h"
+#include"class_string.h"
 
 int main()
 {
@@ -28,11 +28,11 @@ int main()
 	std::cout << "a string: " << a << std::endl;
 	a.append('!');
 	std::cout << "a.append('!'): " << a << std::endl;
-	std::cout << "enter the string: " << std::endl;
+	std::cout << "enter the string: ";
 	std::cin >> a;
 	std::cout << a << std::endl;
 	std::cout << a.Length() << std::endl;
-	system("pause");
+	//system("pause");
 
 	return 0;
 }
